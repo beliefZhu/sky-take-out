@@ -32,4 +32,6 @@ public interface EmployeeMapper {
      * @return
      */
     Page<Employee> pageQuery(String name);
+
+    void update(Employee employee);
 }
