@@ -34,4 +34,6 @@ public interface EmployeeMapper {
     Page<Employee> pageQuery(String name);
 
     void update(Employee employee);
+
+    Employee getById(Long id);
 }
