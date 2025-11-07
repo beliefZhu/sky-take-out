@@ -41,7 +41,14 @@ sky:
     admin-ttl: 7200000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
+    user-secret-key: itheima
+    user-ttl: 7200000
+    user-token-name: authentication
 
   file:
     upload-dir: /Users/zhufengling/projects/sky-take-out/sky-server/src/main/resources/uploads
     access-url: http://localhost:8088/uploads
+
+  wechat:
+    appid: ${sky.wechat.appid}
+    secret: ${sky.wechat.secret}
