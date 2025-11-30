@@ -42,7 +42,14 @@
     <select id="list" resultType="com.sky.entity.Dish">
         select *
         from dish
-        where dish.category_id = #{categoryId}
+        <where>
+            <if test="categoryId != null">
+                and dish.category_id = #{categoryId}
+            </if>
+            <if test="status != null">
+                and dish.status = #{status}
+            </if>
+        </where>
     </select>
 
     <update id="update">
